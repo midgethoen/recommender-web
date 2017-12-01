@@ -1,0 +1,6 @@
+
+// start npm server
+npm start
+
+// in new terminal
+cors-proxy-server

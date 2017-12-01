@@ -1,0 +1,118 @@
+
+.menu-wrap{
+  position: absolute;
+  background-color: rgba(0,0,0,0.0);
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  cursor: pointer;
+  transition: left 0.5s;
+
+  .menu{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background: #582946;
+    background-image: linear-gradient(-135deg, #903C68 0%, #4E2A3A 100%);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,1);
+    height: 100%;
+    width: 66.6%;
+    cursor: default;
+    z-index: 60;
+
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 32px;
+      line-height: 32px;
+
+      li{
+        padding: 0;
+        margin:  0;
+
+        a{
+          color: white;
+          text-decoration: none;
+          font-size: 20px;
+
+          padding: 18px 0px 18px 32px;
+          display: block;
+          width: 100%;
+
+          &:hover{
+            color: white;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+
+  .menu-btn{
+    width: 48px;
+    height: 48px;
+    background-image: linear-gradient(-135deg, #F1CC13 0%, #FF9945 100%);
+    box-shadow: 0 10px 30px -2px rgba(0,0,0,0.50);
+    border-radius: 2px;
+    cursor: pointer;
+    position: absolute;
+    left: 150%;
+    bottom: 21px;
+
+    img{
+      padding: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .menu-lightboxbg{
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+  }
+
+
+
+  &.closed{
+    left: -100%;
+    background-color: rgba(0,0,0,0.0);
+
+    .menu-btn{
+      transition: left 0.5s;
+    }
+
+    .menu-lightboxbg{
+      background-color: rgba(0,0,0,0.0);
+      transition-delay: 1s;
+      transition: 'background-color' 1s;
+    }
+  }
+
+
+  &.open{
+    left: 0;
+
+    .menu-btn{
+      left: 85%;
+      transition: left 0.5s;
+    }
+
+
+  }
+}
+
+.menu-lightboxbg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background-color: rgba(0,0,0,0.7);
+
+  //transition: background-color 1s 0.5s;
+}
