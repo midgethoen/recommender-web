@@ -212,6 +212,37 @@ module.exports = {
             ),
             // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
           },
+          // Add SASS support  - compile all .global.scss files and pipe it to style.css
+          {
+            test: /\.global\.scss$/,
+            use: [
+              { loader: 'style-loader', },
+              {
+                loader: 'css-loader',
+                options: {
+                  sourceMap: true,
+                },
+              },
+              { loader: 'sass-loader', },
+            ],
+          },
+          // Add SASS support  - compile all other .scss files and pipe it to style.css
+          {
+            test: /^((?!\.global).)*\.scss$/,
+            use: [
+              { loader: 'style-loader', },
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: true,
+                  sourceMap: true,
+                  importLoaders: 1,
+                  localIdentName: '[name]__[local]__[hash:base64:5]',
+                },
+              },
+              { loader: 'sass-loader', },
+            ],
+          },
           // "file" loader makes sure assets end up in the `build` folder.
           // When you `import` an asset, you get its filename.
           // This loader doesn't use a "test" so it will catch all modules
