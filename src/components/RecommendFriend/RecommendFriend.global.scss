@@ -1,0 +1,101 @@
+$sans : 'Open Sans', sans-serif;
+$color-bg-action: linear-gradient(-135deg, #F1CC13 0%, #FF9945 100%);
+$color-bg-static: linear-gradient(-135deg, #903C68 0%, #4E2A3A 100%);
+$white: #ffffff;
+
+.recommend-friend-wrap{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 80;
+  background-color: rgba(0,0,0,0.7);
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.50);
+
+  .recommend-friend{
+    height: 314px;
+    margin: 142px 16px 0;
+    border-radius: 4px;
+    background-image: $color-bg-static;
+    text-align: center;
+
+    h2{
+      font-family: $sans;
+      font-weight: 600;
+      font-size: 20px;
+      color: $white;
+      padding: 0px 0 0 16px;
+      text-shadow: 0 0 6px rgba(0,0,0,0.25);
+      padding-top: 48px;
+      text-align: left;
+    }
+
+    p{
+      font-family: $sans;
+      font-weight: 500;
+      font-size: 14px;
+      color: $white;
+      padding: 0px 0 0 16px;
+      text-shadow: 0 0 6px rgba(0,0,0,0.25);
+      text-align: left;
+    }
+
+    input{
+      height: 48px;
+      width: 80%;
+      border-radius: 4px;
+      border: none;
+      box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.50);
+
+      font-family: $sans;
+      font-size: 14px;
+      color: #555555;
+      padding: 0 16px;
+      margin-bottom: 16px;
+    }
+
+    .btn{
+      background-image: $color-bg-action;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 30px -2px rgba(0,0,0,0.50);
+      transition: box-shadow 0.3s;
+
+      &:hover{
+        box-shadow: 0 10px 30px -2px rgba(0,0,0,0.7);
+        transition: box-shadow 0.3s;
+      }
+    }
+
+    .btn-next{
+      height: 64px;
+      border-radius: 32px;
+      width: 256px;
+
+      font-family: $sans;
+      font-weight: 600;
+      font-size: 20px;
+      color: $white;
+      text-shadow: 0 0 6px rgba(0,0,0,0.25);
+
+      box-shadow: 0 0px 0px 0px rgba(0,0,0,0.0);
+      transition: box-shadow 0.3s;
+
+      &:hover{
+        box-shadow: 0 10px 30px -6px rgba(0,0,0,0.5);
+        transition: box-shadow 0.3s;
+      }
+    }
+
+    .btn-close{
+      height: 48px;
+      width: 48px;
+      border-radius: 50%;
+
+      position: absolute;
+      right: 0px;
+      margin-top: -24px;
+
+
+    }
+  }
+}

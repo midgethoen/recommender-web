@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from '../Card';
 import Menu from '../Menu';
 import Recommend from '../Recommend';
+import RecommendFriend from '../RecommendFriend';
 import './Device.css';
 
 
@@ -15,6 +16,7 @@ export default class Device extends Component {
           <div className="phone iphone7">
 
             <Menu />
+            <RecommendFriend />
             <Recommend />
             <Card title="Legion" recommends="20" desc="lkajsldkjalskdj" bannerSrc="https://www.thetvdb.com/banners/fanart/original/320724-3.jpg"/>
             <Card title="Rick And Morty" recommends="20" desc="lkajsldkjalskdj" bannerSrc="https://www.thetvdb.com/banners/fanart/original/275274-10.jpg"/>
