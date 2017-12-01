@@ -4,11 +4,20 @@ import './Card.global.scss';
 export default class Card extends Component {
   render() {
     var { title, recommends, desc, bannerSrc } = this.props
-    var style = {
-      backgroundImage:
-        `linear-gradient(-180deg,rgba(0,0,0,0.00) 40%, rgba(0,0,0,0.68) 100%),
-        url("${bannerSrc}")`
-      }
+    var style
+    if (bannerSrc){
+      style  = {
+        backgroundImage:
+          `linear-gradient(-180deg,rgba(0,0,0,0.00) 40%, rgba(0,0,0,0.68) 100%),
+          url("${bannerSrc}")`
+        }
+    } else{
+      style  = {
+        backgroundImage:
+          `linear-gradient(-135deg, #903C68 0%, #4E2A3A 100%)`
+        }
+    }
+
     return (
       <div className="card" style={style}>
 

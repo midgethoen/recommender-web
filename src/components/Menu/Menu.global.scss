@@ -1,3 +1,5 @@
+$sans : 'Open Sans', sans-serif;
+
 
 .menu-wrap{
   position: absolute;
@@ -36,6 +38,7 @@
           color: white;
           text-decoration: none;
           font-size: 20px;
+          font-family: $sans;
 
           padding: 18px 0px 18px 32px;
           display: block;

@@ -1,0 +1,25 @@
+$sans : 'Open Sans', sans-serif;
+$color-bg-action: linear-gradient(-135deg, #F1CC13 0%, #FF9945 100%);
+$white: #ffffff;
+
+.btn-recommend{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: $color-bg-action;
+  box-shadow: 0 10px 30px -2px rgba(0,0,0,0.50);
+  cursor: pointer;
+  position: absolute;
+  right: -2%;
+  bottom: -15px;
+  z-index: 15;
+
+  p{
+    font-family: $sans;
+    color: $white;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 59px;
+  }
+}
